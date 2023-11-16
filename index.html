@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>suruchy.com</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="index.css"> 
+  
+</head>
+<body>
+  
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">suruchy.com</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+          <div class="dropdown mode-dropdown mr-auto">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="modeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <i id="modeIcon" class="fas fa-star"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="modeDropdown">
+              <li><a class="dropdown-item" href="#" onclick="setDarkMode()"><i class="fas fa-moon"></i></a></li>
+              <li><a class="dropdown-item" href="#" onclick="setLightMode()"><i class="fas fa-sun"></i></a></li>
+              <li><a class="dropdown-item" href="#" onclick="setRainbowMode()"><i class="fas fa-rainbow"></i></a></li>
+            </ul>
+          </div>
+
+          <div class="meteor"></div>
+          <script src="app.js"></script>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <section id="home" class="section">
+    <div class="container">
+      <h1>Welcome to My Website</h1>
+      <p>Hey there, I'm Suruchi, and I'm thrilled to have you here.
+         This is more than just a website; it's my digital playground🏀 
+         where I share my passions, experiences, and a little bit of my 
+         journey. So, grab a virtual coffee☕️, take a seat, and let's
+          dive in!</p>
+    </div>
+  </section>
+
+  <section id="blog" class="section">
+    <div class="container">
+      <h2>Blogs</h2>
+      <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-12">
+                <article>
+                  <h3>Upcoming Blog 1</h3>
+                  <p>Publication Date: Soon</p>
+                  <p>Summary: </p>
+                  <a href="post1.html">
+                    <img src="blog-1.avif" alt ="post-1">
+                  </a>
+                  <br>
+                  <a href="post1.html" onclick="handleReadMoreClick(event)">Read More</a>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-12">
+                <article>
+                  <h3>Upcoming Blog 2</h3>
+                  <p>Publication Date: Soon</p>
+                  <p>Summary: </p>
+                  <a href="post2.html">
+                    <img src="blog-2.jpeg" alt ="post-2">
+                  </a>
+                  <br>
+                  <a href="post2.html" onclick="handleReadMoreClick(event)">Read More</a>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-12">
+                <article>
+                  <h3>Upcoming Blog 3</h3>
+                  <p>Publication Date: Soon</p>
+                  <p>Summary: </p>
+                  <a href="post3.html">
+                    <img src="blog-3.jpeg" alt ="post-3">
+                  </a>
+                  <br>
+                  <a href="post3.html" onclick="handleReadMoreClick(event)">Read More</a>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <img class="rounded-image" src="about.jpeg" alt="Suruchi Thakur">
+      <p>"Born amidst the serene hills of Himachal, nurtured by the vibrant heart of Delhi, and currently embracing the adventure of my adulthood in the enchanting city of Vilnius, where I pursue a Bachelor's degree in the dynamic field of Information Technology."</p>
+      <div class="center-button">
+        <a href="Resume_Suruchi_Thakur.pdf" download="Resume_Suruchi_Thakur.pdf" class="btn btn-primary">Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Let's connect!</h2>
+      <p>Feel free to get in touch with me:</p>
+      <form action="mailto:suruchithakur333@gmail.com" method="post" enctype="text/plain" id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required class="form-control">
+        <input type="email" name="email" placeholder="Your Email" required class="form-control">
+        <textarea name="message" placeholder="Your Message" required class="form-control"></textarea>
+        <button type="button" onclick="validateAndSubmit()" class="btn btn-primary">Send</button>
+      </form>
+      <br>
+      <br>
+      <div class="logo-container">
+        <a href="https://instagram.com/suruchithakurr?igshid=OGQ5ZDc2ODk2ZA==" class="icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100072230645654" class="icon">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/suruchi-thakur-12b056212?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2023 suruchy.com</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
